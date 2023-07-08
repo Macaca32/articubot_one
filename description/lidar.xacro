@@ -2,9 +2,9 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
     <joint name="laser_joint" type="fixed">
-        <parent link="chassis"/>
+        <parent link="base_link"/>
         <child link="laser_frame"/>
-        <origin xyz="0.122 0 0.212" rpy="0 0 0"/>
+        <origin xyz="0.054 0 0.12" rpy="0 0 0"/>
     </joint>
 
     <link name="laser_frame">
@@ -12,8 +12,9 @@
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>
             </geometry>
-            <material name="black"/>
+            <material name="red"/>
         </visual>
+        <!--
         <visual>
             <origin xyz="0 0 -0.05"/>
             <geometry>
@@ -21,6 +22,7 @@
             </geometry>
             <material name="black"/>
         </visual>
+        -->
         <collision>
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>

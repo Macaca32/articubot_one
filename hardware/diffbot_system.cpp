@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "diffdrive_arduino/diffbot_system.hpp"
+#include "articubot_one/diffbot_system.hpp"
 
 #include <chrono>
 #include <cmath>
@@ -23,7 +23,7 @@
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
 #include "rclcpp/rclcpp.hpp"
 
-namespace diffdrive_arduino
+namespace articubot_one
 {
 hardware_interface::CallbackReturn DiffDriveArduinoHardware::on_init(
   const hardware_interface::HardwareInfo & info)
@@ -219,7 +219,7 @@ hardware_interface::return_type DiffDriveArduinoHardware::read(
   return hardware_interface::return_type::OK;
 }
 
-hardware_interface::return_type diffdrive_arduino ::DiffDriveArduinoHardware::write(
+hardware_interface::return_type articubot_one ::DiffDriveArduinoHardware::write(
   const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/)
 {
   if (!comms_.connected())
@@ -233,8 +233,8 @@ hardware_interface::return_type diffdrive_arduino ::DiffDriveArduinoHardware::wr
   return hardware_interface::return_type::OK;
 }
 
-}  // namespace diffdrive_arduino
+}  // namespace articubot_one
 
 #include "pluginlib/class_list_macros.hpp"
 PLUGINLIB_EXPORT_CLASS(
-  diffdrive_arduino::DiffDriveArduinoHardware, hardware_interface::SystemInterface)
+  articubot_one::DiffDriveArduinoHardware, hardware_interface::SystemInterface)

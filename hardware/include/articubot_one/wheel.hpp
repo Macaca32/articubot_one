@@ -1,5 +1,5 @@
-#ifndef DIFFDRIVE_ARDUINO_WHEEL_HPP
-#define DIFFDRIVE_ARDUINO_WHEEL_HPP
+#ifndef ARTICUBOT_ONE_WHEEL_HPP
+#define ARTICUBOT_ONE_WHEEL_HPP
 
 #include <string>
 #include <cmath>
@@ -36,4 +36,4 @@ class Wheel
 };
 
 
-#endif // DIFFDRIVE_ARDUINO_WHEEL_HPP
+#endif // ARTICUBOT_ONE_WHEEL_HPP

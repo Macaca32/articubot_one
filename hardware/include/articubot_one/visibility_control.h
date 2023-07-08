@@ -19,38 +19,38 @@
  * library cannot have, but the consuming code must have inorder to link.
  */
 
-#ifndef DIFFDRIVE_ARDUINO__VISIBILITY_CONTROL_H_
-#define DIFFDRIVE_ARDUINO__VISIBILITY_CONTROL_H_
+#ifndef ARTICUBOT_ONE__VISIBILITY_CONTROL_H_
+#define ARTICUBOT_ONE__VISIBILITY_CONTROL_H_
 
 // This logic was borrowed (then namespaced) from the examples on the gcc wiki:
 //     https://gcc.gnu.org/wiki/Visibility
 
 #if defined _WIN32 || defined __CYGWIN__
 #ifdef __GNUC__
-#define DIFFDRIVE_ARDUINO_EXPORT __attribute__((dllexport))
-#define DIFFDRIVE_ARDUINO_IMPORT __attribute__((dllimport))
+#define ARTICUBOT_ONE_EXPORT __attribute__((dllexport))
+#define ARTICUBOT_ONE_IMPORT __attribute__((dllimport))
 #else
-#define DIFFDRIVE_ARDUINO_EXPORT __declspec(dllexport)
-#define DIFFDRIVE_ARDUINO_IMPORT __declspec(dllimport)
+#define ARTICUBOT_ONE_EXPORT __declspec(dllexport)
+#define ARTICUBOT_ONE_IMPORT __declspec(dllimport)
 #endif
-#ifdef DIFFDRIVE_ARDUINO_BUILDING_DLL
-#define DIFFDRIVE_ARDUINO_PUBLIC DIFFDRIVE_ARDUINO_EXPORT
+#ifdef ARTICUBOT_ONE_BUILDING_DLL
+#define ARTICUBOT_ONE_PUBLIC ARTICUBOT_ONE_EXPORT
 #else
-#define DIFFDRIVE_ARDUINO_PUBLIC DIFFDRIVE_ARDUINO_IMPORT
+#define ARTICUBOT_ONE_PUBLIC ARTICUBOT_ONE_IMPORT
 #endif
-#define DIFFDRIVE_ARDUINO_PUBLIC_TYPE DIFFDRIVE_ARDUINO_PUBLIC
-#define DIFFDRIVE_ARDUINO_LOCAL
+#define ARTICUBOT_ONE_PUBLIC_TYPE ARTICUBOT_ONE_PUBLIC
+#define ARTICUBOT_ONE_LOCAL
 #else
-#define DIFFDRIVE_ARDUINO_EXPORT __attribute__((visibility("default")))
-#define DIFFDRIVE_ARDUINO_IMPORT
+#define ARTICUBOT_ONE_EXPORT __attribute__((visibility("default")))
+#define ARTICUBOT_ONE_IMPORT
 #if __GNUC__ >= 4
-#define DIFFDRIVE_ARDUINO_PUBLIC __attribute__((visibility("default")))
-#define DIFFDRIVE_ARDUINO_LOCAL __attribute__((visibility("hidden")))
+#define ARTICUBOT_ONE_PUBLIC __attribute__((visibility("default")))
+#define ARTICUBOT_ONE_LOCAL __attribute__((visibility("hidden")))
 #else
-#define DIFFDRIVE_ARDUINO_PUBLIC
-#define DIFFDRIVE_ARDUINO_LOCAL
+#define ARTICUBOT_ONE_PUBLIC
+#define ARTICUBOT_ONE_LOCAL
 #endif
-#define DIFFDRIVE_ARDUINO_PUBLIC_TYPE
+#define ARTICUBOT_ONE_PUBLIC_TYPE
 #endif
 
-#endif  // DIFFDRIVE_ARDUINO__VISIBILITY_CONTROL_H_
+#endif  // ARTICUBOT_ONE__VISIBILITY_CONTROL_H_
