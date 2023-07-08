@@ -65,6 +65,11 @@ if(BUILD_TESTING)
   find_package(ament_cmake_gtest REQUIRED)
 endif()
 
+install(
+  DIRECTORY config description launch worlds
+  DESTINATION share/${PROJECT_NAME}
+)
+
 ## EXPORTS
 ament_export_targets(export_articubot_one HAS_LIBRARY_TARGET)
 ament_export_dependencies(${THIS_PACKAGE_INCLUDE_DEPENDS})
