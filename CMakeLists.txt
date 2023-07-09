@@ -50,10 +50,10 @@ install(
   DIRECTORY hardware/include/
   DESTINATION include/articubot_one
 )
-install(
-  DIRECTORY description description/rviz
-  DESTINATION share/articubot_one
-)
+#install(
+#  DIRECTORY description description/rviz
+#  DESTINATION share/articubot_one
+#)
 install(TARGETS articubot_one
   EXPORT export_articubot_one
   ARCHIVE DESTINATION lib
